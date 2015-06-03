@@ -1,7 +1,8 @@
-# OpenJDK Java 7 JRE 
-
 # Pull base image.
 FROM docker.cucloud.net/base
+
+# File Author / Maintainer
+MAINTAINER Shawn Bower <shawn.bower@gmail.com>
 
 # Install Java.
 RUN \
