@@ -1,8 +1,11 @@
 # Pull base image.
-FROM docker.cucloud.net/base
+FROM dtr.cucloud.net/cs/base
 
 # File Author / Maintainer
 MAINTAINER Shawn Bower <shawn.bower@gmail.com>
+
+# variable for latest script version
+ENV SCRIPT_VERSION 1.2.1
 
 # Install Java.
 RUN \
@@ -13,9 +16,9 @@ RUN \
 # Define working directory.
 WORKDIR /
 
-RUN wget http://ec2-downloads.s3.amazonaws.com/cloudwatch-samples/CloudWatchMonitoringScripts-v1.1.0.zip
-RUN unzip CloudWatchMonitoringScripts-v1.1.0.zip
-RUN rm CloudWatchMonitoringScripts-v1.1.0.zip
+RUN wget http://aws-cloudwatch.s3.amazonaws.com/downloads/CloudWatchMonitoringScripts-${SCRIPT_VERSION}.zip
+RUN unzip CloudWatchMonitoringScripts-${SCRIPT_VERSION}.zip
+RUN rm CloudWatchMonitoringScripts-${SCRIPT_VERSION}.zip
 
 COPY monitor.rb /opt/monitor.rb
 
