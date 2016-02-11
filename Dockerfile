@@ -10,7 +10,7 @@ ENV SCRIPT_VERSION 1.2.1
 # Install Java.
 RUN \
   apt-get update && \
-  apt-get install -y unzip libwww-perl libcrypt-ssleay-perl libswitch-perl && \
+  apt-get install -y unzip libwww-perl libcrypt-ssleay-perl libswitch-perl libdatetime-perl && \
   rm -rf /var/lib/apt/lists/*
 
 # Define working directory.
