@@ -4,7 +4,6 @@ disk_path = "--disk-path=/rootfs"
 if ENV["PATHS"]
   ENV["PATHS"].split(",").each do |path|
     disk_path += " --disk-path=/rootfs" + path
-    puts disk_path
   end
 end
 
