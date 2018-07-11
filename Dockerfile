@@ -1,5 +1,5 @@
 # Pull base image.
-FROM http://095493758574.dkr.ecr.us-east-1.amazonaws.com/base
+FROM 095493758574.dkr.ecr.us-east-1.amazonaws.com/base
 
 # File Author / Maintainer
 MAINTAINER Shawn Bower <shawn.bower@gmail.com>
